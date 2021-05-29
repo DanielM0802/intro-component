@@ -1,0 +1,136 @@
+body{
+    background-color: $red;
+    background-image: url(../../../src/images/bg-intro-mobile.png);
+}
+
+.container{
+    width: 80%;
+    max-width: 33rem;
+    margin: 7.5rem auto;
+    .title{
+            margin: auto 2rem;
+            font-size: 2.8rem;
+        }
+    .info{
+        width: 95%;
+        line-height: 1.6;
+        margin: 2rem 0 6rem;
+    }
+    .price{
+        line-height: 1.5;
+        padding: 2rem 7rem;
+        background-color: $blue;
+        margin-bottom: 3rem;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+//Form styles
+.formulario{
+    background-color: white;
+    padding: 2rem;
+    flex-direction: column;
+    .campo, .button{
+        border-radius: .5rem;
+        font-family: $poppins;
+        width: 100%;
+    }
+    .input{
+        width: 100%;
+        margin-bottom: 2rem;
+        .campo{
+            font-weight: 600;
+            color: $darkBlue;
+            height: 5rem;
+            padding: 1rem;
+            box-shadow: none;
+            border: 1px solid #e1e1e1;
+        }
+
+        .red-alert{
+            background-image: url(../../../src/images/icon-error.svg);
+            background-repeat: no-repeat;
+            background-position: 95%;
+            border: 2px solid $red;
+        }
+        .red-text{
+            color: $red;
+        }
+        .validacion{
+            margin-top: .5rem;
+            font-family: $poppins;
+            font-style: italic;
+            color: $red;
+            text-align: right;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    .button{
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+        padding: 2rem 3rem;
+        background-color: $green;
+        border: none;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .alert{
+        width: 85%;
+        margin-top: 2rem;
+        font-size: 1.1rem;
+        color: $grayishBlue;
+        span{
+            color: $red;
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@include desktop{
+body{
+        background-image: url(../../../src/images/bg-intro-desktop.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+}    
+    .container{
+        height: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .left{
+            margin-right: 2rem;
+            
+            .title, .info{
+                text-align: left;
+            }    
+            .title{
+                margin: 0;
+                width: 50rem;
+                font-size: 4.5rem;
+            }
+            .info{
+                margin-bottom: 0;
+                font-size: 1.5rem;
+            }
+        }
+        .right{
+            .price{
+                width: 60rem;
+            }
+            .formulario{
+                padding:4rem; 
+            }
+        }
+    }
+}
